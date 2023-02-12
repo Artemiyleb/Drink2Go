@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drink2Go</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="page__body">
+    <header>
+        <!-- Navbar -->
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="https://htmlacademy.ru/intensive/adaptive">
+                            <picture>
+                                <source media="(min-width: 1440px)" srcset="./img/logo.svg">
+                                <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+                                <img src="./img/logo-mobile.svg" height="36px" alt="Drink2Go логотип">
+                            </picture>
+                        </a>
+                        <div class="logo__description">
+                            <p>Интернет-магазин кофейных напитков</p>
+                        </div>
+                    </div>
+
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu__item"><a href="#" class="menu__item-link link-active" data-scroll>Главная</a></li>
+                            <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Каталог</a></li>
+                            <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Доставка</a></li>
+                            <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>О нас</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul class="menu-login">
+                            <li class="menu-login__item">
+                                <a href="#" class="menu-login__item-link" data-scroll><svg class="menu-login--icon">
+                                  <use xlink:href="./img/icons/stack.svg#user"></use>
+                                  </svg><span class="hide-text">Войти</span></a></li>
+                            <li class="menu-login__item">
+                                <a href="#" class="menu-login__item-link" data-scroll>
+                                    <svg class="menu-login--icon">
+                              <use xlink:href="./img/icons/stack.svg#cart"></use>
+                              </svg>
+                                    <span class="hide-text">Корзина</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="burger">
+                    <span></span>
+                </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__item">
+                            <div class="slide__image">
+                                <img src="./img/slider/Flat-White.png" alt="Декаф Флэт Уайт">
+                            </div>
+                            <div class="slide__row">
+                                <div class="slide__description">
+                                    <div class="slide__badge badge">Новинка!</div>
+                                    <div class="slide__header">Декаф Флэт Уайт</div>
+                                    <div class="slide__text">
+                                        <p>Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                                    </div>
+                                </div>
+                                <div class="slide__order">
+                                    <div class="slide__old-price">295₽</div>
+                                    <div class="slide__price">225</div>
+                                    <button class="button order__btn">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__item">
+                            <div class="slide__image">
+                                <img src="./img/slider/lavender.png" alt="Лавандовый Латте">
+                            </div>
+                            <div class="slide__row">
+                                <div class="slide__description">
+                                    <div class="slide__badge badge">Новинка!</div>
+                                    <div class="slide__header">Лавандовый Латте</div>
+                                    <div class="slide__text">
+                                        <p>Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                                    </div>
+                                </div>
+                                <div class="slide__order">
+                                    <div class="slide__old-price">295₽</div>
+                                    <div class="slide__price">265</div>
+                                    <button class="button order__btn">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__item">
+                            <div class="slide__image">
+                                <img src="./img/slider/Espresso.png" alt="Тройной Эспрессо">
+                            </div>
+                            <div class="slide__row">
+                                <div class="slide__description">
+                                    <div class="slide__badge badge">Новинка!</div>
+                                    <div class="slide__header">Тройной Эспрессо</div>
+                                    <div class="slide__text">
+                                        <p>Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                                    </div>
+                                </div>
+                                <div class="slide__order">
+                                    <div class="slide__old-price">395₽</div>
+                                    <div class="slide__price">375</div>
+                                    <button class="button order__btn">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- If we need pagination-->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="advantages__badge badge">преимущества</div>
+            <h2 class="advantages__header">Главные причины выбрать Drink2Go</h2>
+            <div class="advantages__items">
+                <div class="advantages__item">
+                    <div class="advantages__img">
+                        <img class="" src="./img/time.svg" width="52" height="56" alt="Скорость">
+                    </div>
+                    <div class="advantages__description">
+                        <h3 class="advantages__title">Скорость</h3>
+                        <p class="advantages__text">Готовый напиток всегда под рукой — просто открой банку</p>
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__img">
+                        <img src="./img/convenience.svg" width="52" height="56" alt="Удобство">
+                    </div>
+                    <div class="advantages__description">
+                        <h3 class="advantages__title">Удобство</h3>
+                        <p class="advantages__text">Легко помещается и в карман, и в маленькую сумочку</p>
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__img">
+                        <img src="./img/flash.svg" width="52" height="56" alt="Бодрость">
+                    </div>
+                    <div class="advantages__description">
+                        <h3 class="advantages__title">Бодрость</h3>
+                        <p class="advantages__text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__img">
+                        <img src="./img/eco.svg" width="52" height="56" alt="Экологичность">
+                    </div>
+                    <div class="advantages__description">
+                        <h3 class="advantages__title">Экологичность</h3>
+                        <p class="advantages__text">Вся упаковка сделана из перерабатываемых материалов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="./js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+// ========================= [ Header styles ] =========================
+.header {
+  background-color: @white;
+
+  &.fixed {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+  }
+}
+.navbar {
+  background-color: @white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+.logo {
+  display: flex;
+  height: 36px;
+  align-items: center;
+  z-index: 10;
+}
+.logo__description {
+  max-width: 126px;
+  font-size: 12px;
+  line-height: 1.33;
+  margin-left: 20px;
+  @media (max-width: @desktop-width){
+    display: none;
+  }
+   }
+
+// ========================== [ Menu styles ] ==========================
+.menu {
+  display: flex;
+  gap: 20px;
+  @media (max-width: @desktop-width){
+    gap: 0;
+  }
+
+  // .menu__item
+  &__item {
+      display: flex;
+      position: relative;
+      }
+
+  // .menu__item-link
+  &__item-link {
+    display: block;
+    margin: 0 20px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    color: @baseBlack;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    transition: 0.2s color;
+       &:hover {
+          color: @primary;
+           }
+  }
+  // Mobile menu styles
+  @media screen and (max-width: @mobile-width-only) {
+      position: fixed;
+      background: @white;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      display: none;
+
+      &.active {
+          display: flex;
+          left: 0;
+          top: 0;
+          height: 100vh;
+          width: 100vw;
+          flex-direction: column;
+          pointer-events: all;
+          justify-content: center;
+          align-items: center;
+          z-index: 2;
+          animation: fade 0.1s linear;
+      }
+  }
+}
+.menu-login {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  @media (max-width: @desktop-width){
+    gap: 0;
+    z-index: 20;
+  }
+
+  // .menu__item
+  &__item {
+      display: flex;
+      position: relative;
+  }
+
+  // .menu__item-link
+  &__item-link {
+    display: block;
+    margin: 22px 22px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    color: @baseBlack;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    transition: 0.2s color;
+       &:hover {
+          color: @primary;
+           }
+           @media (min-width: @tablet-width){
+            margin: 32px 22px;
+          }
+  }
+}
+.menu-login--icon {
+  width: 16px;
+  height: 16px;
+  &:hover {
+    stroke: @primary;
+     }
+}
+.hide-text {
+  margin-left: 8px;
+  @media (max-width: @desktop-width){
+    display: none;
+  }
+}
+
+// ========================= [ Burger styles ] =========================
+.burger {
+  display: none;
+  background: transparent;
+  z-index: 3;
+  @media screen and (max-width: @mobile-width-only) {
+      display: flex;
+      position: relative;
+      height: 12px;
+      width: 16px;
+
+      &.active {
+          &:before {
+              background: @baseBlack;;
+              transform: rotate(45deg);
+              transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+              top: 5px;
+          }
+
+          &:after {
+              background: @baseBlack;;
+              transform: rotate(-45deg);
+              bottom: 6px;
+              transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+          }
+
+          & span {
+              transform: scale(0);
+          }
+      }
+
+      &:before,
+      &:after {
+          content: '';
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          background: @baseBlack;
+          transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+      }
+
+      &:before {
+          top: 0;
+      }
+
+      &::after {
+          bottom: 0;
+      }
+
+      span {
+          position: absolute;
+          top: 5.5px;
+          right: 0;
+          width: 100%;
+          background: @baseBlack;
+          height: 1px;
+          transform: scale(1);
+          transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+      }
+  }
+}
+
