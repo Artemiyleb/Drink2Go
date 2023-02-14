@@ -1,0 +1,127 @@
+.select {
+  width: 180px;
+  margin-left: 10px;
+  position: relative;
+  z-index: 10;
+
+  &__backdrop {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: transparent;
+      z-index: -1;
+      display: none;
+  }
+
+  &.open {
+      .select__dropdown {
+          display: block;
+          z-index: 5;
+      }
+
+      // .select__input {
+      //     border-bottom: none;
+      // }
+
+      .select__backdrop {
+          display: block;
+      }
+  }
+
+  // Select input styles
+  &__input {
+      border: none;
+      display: flex;
+      align-items: center;
+      padding: 4px 10px;
+      cursor: pointer;
+      display: flex;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1.5;
+      text-align: right;
+      color: @primary;
+      width: 100%;
+      &:hover,
+      &:focus {
+        background: #F0EBFF;
+        border-radius: 4px;
+      }
+
+
+      // Select image styles
+      .select__img {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+      }
+
+      // Select arrow styles
+      .select__arrow {
+          pointer-events: none;
+          margin-left: auto;
+          width: 10px;
+          transition: 0.3s transform;
+          &.open {
+              transform: rotate(-180deg);
+          }
+      }
+
+      span {
+          pointer-events: none;
+      }
+  }
+
+  // Select dropdown styles
+  &__dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -10px;
+      right: 0;
+      background: #ffffff;
+      width: 190px;
+      z-index: 5;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+
+      .select__list {
+          .select__item {
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              padding: 8px 20px;
+              font-style: normal;
+              font-size: 16px;
+              color: @baseBlack;
+              &:not(:last-child) {
+                border-bottom: 1px solid @primary-light;
+              }
+              &:last-child {
+                border-radius: 0 0 4px 4px;
+              }
+              .select__img {
+                  border-radius: 50%;
+                  margin-right: 10px;
+                  width: 20px;
+                  height: 20px;
+              }
+
+              // Selected item styles
+              &.selected {
+                  background-color: @primary;
+                  color: @white;
+              }
+
+              // Select item hover state
+              &:hover {
+                  background-color: @primary-light;
+                  color: @baseBlack;
+                  transition: 0.15 background-color ease-in;
+              }
+          }
+      }
+  }
+}

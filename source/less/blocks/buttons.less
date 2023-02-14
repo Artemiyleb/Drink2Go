@@ -1,23 +1,40 @@
 .button {
-  background-color: @primary;
+  display: inline-block;
+  padding: 11px 20px;
+  font-size: 16px;
+  font-weight: 400;
   color: @white;
+  background-color: @primary;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s;
+
+  &--checkout {
+    position: relative;
+    font-size: 14px;
+    padding: 10px 20px 10px 46px;
+  }
+
+  &--checkout::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../img/checkout.svg');
+    background-repeat: no-repeat;
+  }
+
   &:hover {
     background-color: @primary-lighter;
   }
+
   &:active {
     background-color: @primary-darker;
   }
-  &:disabled {
-    background-color: @grey;
-  }
 }
 .order__btn {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
   text-align: center;
   padding: 8px 20px;
 }
