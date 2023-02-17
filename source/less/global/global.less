@@ -11,34 +11,46 @@ body {
   color: @baseBlack;
   font-size: 16px;
   font-weight: 400;
-  }
+}
+
 p {
   margin: 0;
 }
+
 h2 {
   font-weight: 700;
   font-size: 24px;
   line-height: 1.5;
   text-align: center;
   color: @baseBlack;
- @media (min-width: @tablet-width){
-  font-size: 42px;
-  line-height: 1.52;
- }
+
+  @media (min-width: @tablet-width) {
+    font-size: 42px;
+    line-height: 1.52;
+  }
 }
+
 h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.78;
   color: @baseBlack;
-  @media (min-width: @tablet-width){
+
+  @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 1.5;
-   }
+  }
 }
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .page__body {
   margin: 0;
 }
+
 .badge {
   font-weight: 700;
   font-size: 12px;
@@ -48,15 +60,26 @@ h3 {
   text-transform: uppercase;
   color: @primary;
 }
+
 .container {
-  padding: 0 40px;
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    padding: 0 30px;
+  padding: 0 20px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px;
   }
-  @media (max-width: @mobile-width-only) {
-    padding: 0 20px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
   }
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -69,4 +92,3 @@ h3 {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-

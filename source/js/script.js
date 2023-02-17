@@ -202,5 +202,4 @@ const marker = L.marker({
 }, {
     icon: pinIcon,
 });
-
 marker.addTo(map);

@@ -1,15 +1,15 @@
 * {
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 *,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+*::before,
+*::after {
+  --moz-box-sizing: border-box;
+  --webkit-box-sizing: border-box;
+  --box-sizing: border-box;
 }
 
 aside,
@@ -22,9 +22,9 @@ section {
 
 body {
   line-height: 1;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  --ms-text-size-adjust: 100%;
+  --moz-text-size-adjust: 100%;
+  --webkit-text-size-adjust: 100%;
 }
 
 input::-ms-clear {

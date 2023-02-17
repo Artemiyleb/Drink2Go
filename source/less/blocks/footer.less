@@ -1,11 +1,13 @@
 .footer {
- margin: 20px 0 30px 0;
- background-color: @white;
+  margin: 20px 0 30px 0;
+  background-color: @white;
 }
+
 .footer-wrap {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 .footer-desktop-wrap {
   @media (min-width: @desktop-width) {
     display: flex;
@@ -13,6 +15,7 @@ flex-direction: column;
     gap: 30px;
   }
 }
+
 .footer-icons {
   display: flex;
   justify-content: space-between;
@@ -21,26 +24,30 @@ flex-direction: column;
   @media (min-width: @desktop-width) {
     flex-direction: column;
     margin-top: 20px;
-      }
-
+  }
 }
+
 .footer-logo {
   flex-direction: column;
   align-items: start;
+
   @media (min-width: @desktop-width) {
     margin-bottom: 50px;
-      }
- }
+  }
+}
+
 .footer-logo__description {
   margin-top: 10px;
   margin-left: 0;
   max-width: 100%;
   font-size: 14px;
- }
+}
+
 .footer-icons-social {
   display: flex;
   gap: 20px;
-  }
+}
+
 .footer-icons-social__link {
   width: 40px;
   height: 40px;
@@ -49,37 +56,45 @@ flex-direction: column;
   align-items: center;
   border-radius: 4px;
   transition: all 0.3s;
+
   &:hover {
     background: @primary-light;
   }
+
   &:active {
     background: rgba(120, 89, 207, 0.25);
   }
 }
+
 .footer-icons-social__link--pinterest {
   fill: @grey;
   width: 22px;
   height: 22px;
   transition: all 0.3s;
+
   &:hover {
     fill: @primary;
   }
 }
+
 .footer-icons-social__link--vk,
 .footer-icons-social__link--ok {
   fill: @grey;
   width: 20px;
   height: 20px;
   transition: all 0.3s;
+
   &:hover {
     fill: @primary;
   }
 }
+
 .footer-nav {
   @media (max-width: @tablet-width) {
     min-width: 222px;
   }
 }
+
 .footer-title {
   font-weight: 700;
   font-size: 14px;
@@ -88,14 +103,15 @@ flex-direction: column;
   color: @primary;
   padding-top: 20px;
   margin-bottom: 20px;
-  //border-top: 1px solid @primary-light
 }
+
 .footer-nav-wrap {
   @media (min-width: @tablet-width) {
     display: flex;
     gap: 30px;
   }
 }
+
 .footer-nav__item {
   font-weight: 500;
   font-size: 12px;
@@ -104,75 +120,88 @@ flex-direction: column;
   text-transform: uppercase;
   margin-bottom: 20px;
   transition: all 0.3s;
+
   a {
     color: @baseBlack;
+
     &:hover {
       color: @primary-lighter;
     }
   }
 }
+
 .footer-contacts {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.43;
-    margin-bottom: 20px;
-  //  border-bottom: 1px solid @primary-light;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  margin-bottom: 20px;
 }
-.footer-address  {
+
+.footer-address {
   position: relative;
   max-width: 260px;
   margin-bottom: 16px;
   margin-left: 19px;
-  &:before {
+
+  &::before {
     content: "";
     position: absolute;
-    background-image: url(../../img/address.svg);
+    background-image: url("../../img/address.svg");
     top: 3px;
     left: -19px;
     width: 13px;
     height: 16px;
   }
 }
+
 .footer-phone {
   position: relative;
   margin-bottom: 20px;
   transition: all 0.3s;
   color: @baseBlack;
   margin-left: 19px;
-  &:before {
+
+  &::before {
     content: "";
     position: absolute;
-    background-image: url(../../img/phone.svg);
+    background-image: url("../../img/phone.svg");
     top: 0;
     left: -19px;
     width: 13px;
     height: 16px;
   }
-    &:hover {
-      color: @primary-lighter;
-    }
+
+  &:hover {
+    color: @primary-lighter;
+  }
 }
+
 .footer-copyrights {
   display: flex;
   gap: 3px;
   margin-top: 20px;
   justify-content: center;
-  p, a {
+
+  p,
+  a {
     font-size: 12px;
     line-height: 1.33;
     text-align: right;
     color: @grey;
     transition: all 0.3s;
   }
+
   a {
     &:hover {
       color: @primary;
     }
-   &:active {
-    color: @primary-darker;
+
+    &:active {
+      color: @primary-darker;
+    }
   }
-  }
- }
+}
+
 .footer-copyrights__link {
   display: flex;
   align-items: center;
@@ -180,25 +209,30 @@ flex-direction: column;
   color: @grey;
   fill: @grey;
   transition: all 0.3s;
-   &:hover {
-      fill: @primary;
-    }
-   &:active {
+
+  &:hover {
+    fill: @primary;
+  }
+
+  &:active {
     fill: @primary-darker;
   }
-    }
-    .footer-icons-social__link--HTML_academy_Logo {
-      width: 12px;
-      height: 16px;
-         }
+}
+
+.footer-icons-social__link--logo {
+  width: 12px;
+  height: 16px;
+}
+
 .line {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid @primary-light;
-    margin: 0;
-    padding: 0;
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid @primary-light;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
